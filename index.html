@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Zoo</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="css/animals.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/animals.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="date"></div>
+      <header>
+        <h1>Zoo</h1>
+      </header>
+      <div class="choose"> Please select how many random animals to show: <select onchange="showAnimals(value)">
+          <option value="">Select</option>
+          <option value="4">4</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+        </select>
+        <button onclick="clearAll()">Clear</button><br>
+        <span>Click on animal for more details.</span>
+      </div>
+    </div>
+    <main>
+      <div class="box">
+          <span id="clk"></span>
+        <table id="animals"></table>
+      </div>
+    </main>
+    <!--Popup-->
+    <div id="show" class="overlay">
+      <div class="popup">
+        <a class="close" href="#anchor">&times;</a>
+        <div id="desc" class="content"></div>
+      </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  </body>
+</html>
